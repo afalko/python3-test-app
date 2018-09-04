@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build and Test') {
             steps {
-                sh "docker build -t afalko/python2-test-app:${BUILD_ID} ."
+                sh "docker build -t afalko/python3-test-app:${BUILD_ID} ."
                 sh "[ 'Hello world' == \"`docker run --rm afalko/python3-test-app:${BUILD_ID}`\" ]"
             }
         }
