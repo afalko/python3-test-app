@@ -41,7 +41,7 @@ pipeline {
             steps {
                 sh "docker run --rm -e git_api_token -e git_api_url \
 					salesforce/dockerfile-image-update --org afalko \
-					parent afalko/python2-test-app ${BUILD_ID} ${image_map_store}"
+					parent afalko/python3-test-app ${BUILD_ID} ${image_map_store}"
             }
         }
     }
